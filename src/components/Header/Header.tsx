@@ -5,7 +5,7 @@ import s from "./Header.module.css";
 const Header = () => {
   return (
     <header>
-      <p>header</p>
+      <p>headr</p>
     </header>
   );
 };
