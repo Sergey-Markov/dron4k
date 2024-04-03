@@ -1,16 +1,19 @@
 import React from "react";
 import Link from "next/link";
 
-import s from "./HeaderNavigation.module.css";
-import { _CONSTANTS } from "@utils/constnts";
+import { CONSTANTS } from "@utils/constnts";
 
-const HeaderNavigation = () => {
+import s from "./HeaderNavigation.module.css";
+
+function HeaderNavigation() {
   return (
-    <nav className=" flex gap-2">
-      {_CONSTANTS.headerNavLinks.map((el, index) => {
+    <nav className={s.navBox}>
+      {CONSTANTS.headerNavLinks.map((el, ind) => {
+        const keyExt = `${el.name}-${ind}`;
+
         return (
           <Link
-            key={index}
+            key={keyExt}
             href={el.href}
           >
             {el.text}
@@ -18,9 +21,10 @@ const HeaderNavigation = () => {
         );
       })}
       <ul>
-        {_CONSTANTS.companyContacts.map((el, ind) => {
+        {CONSTANTS.companyContacts.map((el, ind) => {
+          const keyExt = `${el.type}-${ind}`;
           return (
-            <li key={ind}>
+            <li key={keyExt}>
               <a
                 type={el.type}
                 href={el.href}
@@ -35,6 +39,6 @@ const HeaderNavigation = () => {
       </ul>
     </nav>
   );
-};
+}
 
 export default HeaderNavigation;

@@ -30,7 +30,7 @@ const companyContacts = [
   },
 ];
 
-export const _CONSTANTS = {
+export const CONSTANTS = {
   headerNavLinks,
   companyName,
   companyContacts,
