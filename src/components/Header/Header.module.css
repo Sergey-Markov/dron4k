@@ -1,0 +1,45 @@
+.headerBox {
+  @apply w-full container;
+  position: relative;
+}
+.blurBox {
+  @apply w-screen h-full;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+  filter: blur(15px);
+  z-index: -1;
+}
+.headerWrapper {
+  @apply flex flex-row items-center w-full gap-2 px-4;
+}
+
+/* .visibleMobMenu {
+  @apply flex flex-col justify-start gap-14 bg-white overflow-y-auto h-screen  w-screen sm:max-w-sm z-10 absolute inset-y-0 right-0 px-14 py-5 border-l-2 border-l-appColors-base-100;
+  animation-name: slide-in;
+  animation-duration: 1s;
+  z-index: 999;
+}
+
+.hiddenMobMenu {
+  @apply flex flex-col justify-start gap-14 bg-white overflow-y-auto h-screen  w-screen sm:max-w-sm z-10 absolute inset-y-0 right-0 px-14 py-5 border-l-2 border-l-appColors-base-100;
+  animation: slide-out 1s ease forwards;
+  z-index: 999;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+} */
