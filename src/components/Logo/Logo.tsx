@@ -1,16 +1,16 @@
 import React from "react";
 
+import { CONSTANTS } from "@utils/constnts";
 import s from "./Logo.module.css";
-import { _CONSTANTS } from "@utils/constnts";
 
 interface ILogo {
   color: string;
   size: number;
 }
 
-const Logo = ({ color, size }: ILogo) => {
+function Logo({ color, size }: ILogo) {
   return (
-    <div className=" flex flex-row items-center px-2">
+    <div className={s.logoWrapper}>
       <svg
         width={size}
         height={size}
@@ -78,10 +78,10 @@ const Logo = ({ color, size }: ILogo) => {
         />
       </svg>
       <h1 className=" font-sans font-extrabold text-white text-4xl">
-        {_CONSTANTS.companyName}
+        {CONSTANTS.companyName}
       </h1>
     </div>
   );
-};
+}
 
 export default Logo;

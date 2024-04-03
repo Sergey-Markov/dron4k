@@ -1,0 +1,3 @@
+.logoWrapper {
+  @apply flex flex-row items-center px-2;
+}
