@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
+import ZSUHelp from "@components/ZSUHelp/ZSUHelp";
 import { CONSTANTS } from "@utils/constnts";
 
 import s from "./HeaderNavigation.module.css";
@@ -10,10 +10,10 @@ function HeaderNavigation() {
     <nav className={s.navBox}>
       {CONSTANTS.headerNavLinks.map((el, ind) => {
         const keyExt = `${el.name}-${ind}`;
-
         return (
           <Link
             key={keyExt}
+            className={s.links}
             href={el.href}
           >
             {el.text}
@@ -26,17 +26,21 @@ function HeaderNavigation() {
           return (
             <li key={keyExt}>
               <a
+                className={s.links}
                 type={el.type}
                 href={el.href}
-                title="Лучшее место для поиска дополнительной информации
-           о миссии Mozilla и о том, как внести свой вклад"
+                title={el.title}
+                referrerPolicy="no-referrer"
               >
-                {el.href}
+                {el.text}
               </a>
             </li>
           );
         })}
       </ul>
+      <div className=" animate-slide-left">
+        <ZSUHelp />
+      </div>
     </nav>
   );
 }

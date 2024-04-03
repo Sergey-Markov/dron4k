@@ -21,12 +21,14 @@ const companyContacts = [
   {
     type: "tel",
     title: "телефон компанії Dron4k",
-    href: "+38-098-27-000-**",
+    href: "tel:+380982701256",
+    text: "+380982701256",
   },
   {
     type: "email",
     title: "емейл компанії Dron4k",
     href: "mailto:1EmailDrone@gmai.com",
+    text: "1EmailDrone@gmai.com",
   },
 ];
 
