@@ -1,4 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import type { Config } from "tailwindcss";
+
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: [
@@ -31,6 +34,11 @@ const config: Config = {
           "0%": { transform: "translateY(100px)" },
           "100%": { transform: "translateY(0px)" },
         },
+      },
+      fontFamily: {
+        caveat: ["var(--font-caveat-mono)"],
+        sans: [...defaultTheme.fontFamily.sans],
+        serif: [...defaultTheme.fontFamily.serif],
       },
     },
   },

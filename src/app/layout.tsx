@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import Header from "@components/Header/Header";
 import React from "react";
 import Footer from "@components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const caveatMono = Caveat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-caveat-mono",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,9 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={
-          (inter.className, "flex flex-col justify-between overflow-hidden")
-        }
+        className={`${inter} ${caveatMono.variable} flex flex-col justify-between overflow-hidden`}
       >
         <Header />
         {children}
