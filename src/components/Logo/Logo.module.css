@@ -1,3 +1,37 @@
 .logoWrapper {
-  @apply flex flex-row items-center px-2;
+  @apply flex flex-row items-center px-2 cursor-pointer text-white fill-white hover:text-red-500 hover:fill-red-500 transition-colors;
+}
+
+.someLine {
+  animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 6 both;
+}
+.someLineSec {
+  animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 6 both;
+}
+
+@keyframes shake-top {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
 }

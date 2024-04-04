@@ -10,10 +10,9 @@ function Header() {
     <header className={s.headerBox}>
       <div className={s.blurBox} />
       <div className={s.headerWrapper}>
-        <Logo
-          color="white"
-          size={90}
-        />
+        <div className=" animate-slide-right">
+          <Logo size={90} />
+        </div>
         <HeaderNavigation />
       </div>
     </header>
