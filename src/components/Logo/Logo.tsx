@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CONSTANTS } from "@utils/constnts";
+import { CONSTANTS } from "@utils/constants";
 import s from "./Logo.module.css";
 
 interface ILogo {

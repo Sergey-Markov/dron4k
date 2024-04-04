@@ -1,6 +1,7 @@
 .headerBox {
   @apply w-full;
   position: relative;
+  z-index: 10;
 }
 .blurBox {
   @apply w-screen h-full;

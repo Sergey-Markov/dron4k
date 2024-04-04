@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ZSUHelp from "@components/ZSUHelp/ZSUHelp";
-import { CONSTANTS } from "@utils/constnts";
+import { CONSTANTS } from "@utils/constants";
 
 import s from "./HeaderNavigation.module.css";
 
