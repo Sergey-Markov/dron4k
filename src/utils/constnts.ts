@@ -31,9 +31,27 @@ const companyContacts = [
     text: "1EmailDrone@gmai.com",
   },
 ];
+const companyInSocial = [
+  {
+    type: "instagram",
+    title: "інстаграм компанії Dron4k",
+    href: "https://www.instagram.com",
+  },
+  {
+    type: "telegram",
+    title: "телеграм компанії Dron4k",
+    href: "https://web.telegram.org",
+  },
+  {
+    type: "facebook",
+    title: "фейсбук компанії Dron4k",
+    href: "https://www.facebook.com/",
+  },
+];
 
 export const CONSTANTS = {
   headerNavLinks,
   companyName,
   companyContacts,
+  companyInSocial,
 };

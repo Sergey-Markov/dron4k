@@ -16,6 +16,7 @@ const config: Config = {
       animation: {
         "slide-right": " slide-right 0.3s ease-in .3s both",
         "slide-left": " slide-left 0.3s ease-in 0.3s both;",
+        "slide-top": " slide-top 4s ease-in 1s both;",
       },
       keyframes: {
         "slide-right": {
@@ -25,6 +26,10 @@ const config: Config = {
         "slide-left": {
           "0%": { transform: "translateX(300px)" },
           "100%": { transform: "translateX(0px)" },
+        },
+        "slide-top": {
+          "0%": { transform: "translateY(100px)" },
+          "100%": { transform: "translateY(0px)" },
         },
       },
     },

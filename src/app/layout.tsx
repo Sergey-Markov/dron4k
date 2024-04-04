@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@components/Header/Header";
 import React from "react";
+import Footer from "@components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={(inter.className, "overflow-hidden")}>
+      <body
+        className={
+          (inter.className, "flex flex-col justify-between overflow-hidden")
+        }
+      >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
