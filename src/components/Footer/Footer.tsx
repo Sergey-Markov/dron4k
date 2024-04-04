@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CgInstagram } from "react-icons/cg";
 import { FaTelegramPlane } from "react-icons/fa";
 import { AiOutlineFacebook } from "react-icons/ai";
-import { CONSTANTS } from "@utils/constnts";
+import { CONSTANTS } from "@utils/constants";
 
 import s from "./Footer.module.css";
 
