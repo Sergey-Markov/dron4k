@@ -2,21 +2,10 @@
   @apply flex flex-row items-center gap-5;
 }
 .links {
-  @apply text-white font-bold text-base font-sans cursor-pointer transition-all duration-300;
+  @apply text-gray-300 font-normal text-base font-sans cursor-pointer transition-all duration-300;
 }
 .links:hover,
 .links:focus,
 .links:active {
-  color: transparent;
-  background: rgb(55, 136, 192);
-  background: linear-gradient(
-    180deg,
-    rgba(55, 136, 192, 1) 60%,
-    rgba(215, 180, 19, 1) 100%
-  );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  background-clip: text;
+  @apply text-red-500;
 }
