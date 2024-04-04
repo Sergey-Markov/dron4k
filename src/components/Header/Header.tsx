@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "@components/Logo/Logo";
 import HeaderNavigation from "@components/HeaderNavigation/HeaderNavigation";
 
+import Link from "next/link";
 import s from "./Header.module.css";
 
 function Header() {
@@ -11,7 +12,9 @@ function Header() {
       <div className={s.blurBox} />
       <div className={s.headerWrapper}>
         <div className=" animate-slide-right">
-          <Logo size={90} />
+          <Link href="/">
+            <Logo size={90} />
+          </Link>
         </div>
         <HeaderNavigation />
       </div>
