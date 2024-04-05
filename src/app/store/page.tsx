@@ -4,7 +4,7 @@ import heroBg from "@images/store_bg.png";
 
 import s from "./Store.module.css";
 
-function Store() {
+const Store = () => {
   return (
     <section id="store">
       <Image
@@ -17,11 +17,10 @@ function Store() {
         sizes="100vw"
         style={{
           objectFit: "cover",
-          // zIndex: -2,
         }}
       />
     </section>
   );
-}
+};
 
 export default Store;
