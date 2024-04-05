@@ -35,6 +35,13 @@ body {
   }
 }
 
+.hovered:hover,
+.hovered:active,
+.hovered:focus,
+.hovered:focus-visible {
+  @apply text-red-500 fill-red-500 transition-all duration-300 cursor-pointer;
+}
+
 .kenburns-top {
   animation: kenburns-top 5s ease-in both;
 }

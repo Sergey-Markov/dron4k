@@ -23,22 +23,22 @@ const getSocIcon = (type: string) => {
 
 function Footer() {
   return (
-    <footer className=" w-full h-fit py-5 fixed bottom-0 text-base text-gray-400 flex flex-col items-center animate-slide-top">
+    <footer className={s.footer}>
       <div className={s.blurBox} />
-      <div className=" flex flex-row items-center gap-8 pt-3 ">
+      <div className={s.linksWrapper}>
         <Link
-          className="hover:text-red-500 transition-all duration-300"
+          className="hovered"
           href="/team"
         >
           Команда фахівців
         </Link>
 
-        <ul className=" flex flex-row gap-2  border-l-2 border-r-2 px-8">
+        <ul className={s.linksList}>
           {CONSTANTS.companyInSocial.map((el) => {
             const typeOfEl = el.type;
             return (
               <li
-                className="hover:text-red-500 transition-all duration-300"
+                className="hovered"
                 key={`${typeOfEl}-icon`}
               >
                 <a
@@ -53,7 +53,7 @@ function Footer() {
         </ul>
 
         <Link
-          className="hover:text-red-500 transition-all duration-300"
+          className="hovered"
           href="/policy"
         >
           Політика конфіденційності
@@ -61,7 +61,7 @@ function Footer() {
       </div>
       <p className=" text-center text-gray-400">
         © 2024 Усі права захищено - розроблено
-        <span className=" ml-2 hover:text-red-500 transition-all duration-300">
+        <span className="hovered ml-2">
           <a href="https://sergey-markov.github.io/My-CV/">QttR</a>
         </span>
       </p>

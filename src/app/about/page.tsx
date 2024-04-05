@@ -22,7 +22,7 @@ const {
 
 function About() {
   return (
-    <section className="relative">
+    <section className={s.hero}>
       <div className={s.svgBox}>
         <DroneSvg />
       </div>

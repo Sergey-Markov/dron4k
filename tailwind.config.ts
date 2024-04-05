@@ -32,7 +32,7 @@ const config: Config = {
         },
         "slide-top": {
           "0%": { transform: "translateY(100px)" },
-          "100%": { transform: "translateY(0px)" },
+          "100%": { transform: "translateY(-10px)" },
         },
       },
       fontFamily: {
