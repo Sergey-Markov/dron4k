@@ -1,0 +1,17 @@
+.cardWrapper {
+  @apply relative border-neutral-200 rounded-lg;
+  padding: 10px;
+  width: 395px;
+  height: 550px;
+  background: #0d0c0c44;
+  backdrop-filter: blur(9px);
+  overflow: hidden;
+}
+.cardTitle {
+  @apply font-bold text-3xl;
+  color: #d29e39;
+}
+
+.droneName {
+  @apply font-medium text-white w-1/2;
+}
