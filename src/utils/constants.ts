@@ -10,7 +10,7 @@ const headerNavLinks = [
     text: "Курс навчання",
   },
   {
-    href: "/sell",
+    href: "/store",
     name: "sell",
     text: "Продаж дронів",
   },
