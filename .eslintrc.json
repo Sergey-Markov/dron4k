@@ -24,6 +24,16 @@
     "import/prefer-default-export": "off",
     "quotes": "off",
     "linebreak-style": "off",
-    "prefer-arrow-callback": "error"
+    "prefer-arrow-callback": "error",
+    "react/function-component-definition": [
+      {
+        "namedComponents": [
+          "function-declaration",
+          "function-expression",
+          "arrow-function"
+        ],
+        "unnamedComponents": ["function-expression", "arrow-function"]
+      }
+    ]
   }
 }
