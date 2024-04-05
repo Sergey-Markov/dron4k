@@ -7,6 +7,10 @@ import { CONSTANTS } from "@utils/constants";
 
 import s from "./Footer.module.css";
 
+// eslint-disable-next-line object-curly-newline, operator-linebreak
+const { teamLink, policyLink, allRightsReserved, devName, companyInSocial } =
+  CONSTANTS;
+
 const getSocIcon = (type: string) => {
   switch (type) {
     case "instagram":
@@ -30,11 +34,11 @@ function Footer() {
           className="hovered"
           href="/team"
         >
-          Команда фахівців
+          {teamLink}
         </Link>
 
         <ul className={s.linksList}>
-          {CONSTANTS.companyInSocial.map((el) => {
+          {companyInSocial.map((el) => {
             const typeOfEl = el.type;
             return (
               <li
@@ -56,13 +60,18 @@ function Footer() {
           className="hovered"
           href="/policy"
         >
-          Політика конфіденційності
+          {policyLink}
         </Link>
       </div>
       <p className=" text-center text-gray-400">
-        © 2024 Усі права захищено - розроблено
+        {allRightsReserved}
         <span className="hovered ml-2">
-          <a href="https://sergey-markov.github.io/My-CV/">QttR</a>
+          <a
+            href="https://sergey-markov.github.io/My-CV/"
+            lang="en"
+          >
+            {devName}
+          </a>
         </span>
       </p>
     </footer>

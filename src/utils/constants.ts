@@ -50,6 +50,11 @@ const companyInSocial = [
   },
 ];
 
+const teamLink = "Команда фахівців";
+const policyLink = "Політика конфіденційності";
+const allRightsReserved = "© 2024 Усі права захищено - розроблено";
+const devName = "QttR";
+
 const aboutTitle = "Про нас";
 // eslint-disable-next-line operator-linebreak
 const aboutText =
@@ -72,4 +77,8 @@ export const CONSTANTS = {
   teamVisionTextUp,
   teamVisionTextDown,
   buttonInterestTitle,
+  teamLink,
+  policyLink,
+  allRightsReserved,
+  devName,
 };
