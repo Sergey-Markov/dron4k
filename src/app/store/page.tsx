@@ -4,6 +4,7 @@ import heroBg from "@images/store_bg.png";
 import StoreCard from "@components/StoreCard/StoreCard";
 
 import s from "./Store.module.css";
+import { CONSTANTS } from "@utils/constants";
 
 const Store = () => {
   return (
@@ -25,7 +26,17 @@ const Store = () => {
         }}
       />
       <div>
-        <StoreCard />
+        {CONSTANTS.sellCards.map((item, ind) => {
+          const keyGen = `sellCard${ind}`;
+          return (
+            <StoreCard
+              key={keyGen}
+              options={item}
+            />
+          );
+        })}
+
+        {/* <StoreCard /> */}
       </div>
     </section>
   );

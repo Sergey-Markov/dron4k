@@ -140,10 +140,7 @@
   padding-right: 15px;
 }
 .button {
-  @apply rounded-md bg-red-500 font-caveat text-lg font-bold self-end hover:bg-red-600 transition-all duration-300;
-  width: fit-content;
-  height: auto;
-  padding: 5px 15px;
+  @apply self-end;
 }
 
 .svgBox {

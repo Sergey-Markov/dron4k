@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import DroneSvg from "@components/DroneSvg/DroneSvg";
@@ -10,6 +11,7 @@ import page from "@images/web_page.png";
 import { CONSTANTS } from "@utils/constants";
 
 import s from "./About.module.css";
+import Button from "@components/Button/Button";
 
 const {
   aboutTitle,
@@ -83,12 +85,13 @@ function About() {
             <p className={s.text}>{teamVisionTextUp}</p>
             <p className={s.text}>{teamVisionTextDown}</p>
           </div>
-          <button
-            type="button"
-            className={s.button}
-          >
-            {buttonInterestTitle}
-          </button>
+          <div className={s.button}>
+            <Button
+              title={buttonInterestTitle}
+              variant="primary"
+              onClick={() => {}}
+            />
+          </div>
         </div>
         <div className={s.gridBox6}>
           <Image

@@ -11,6 +11,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        appColors: {
+          "bg-gold": "#d29e39",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
