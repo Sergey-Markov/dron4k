@@ -2,8 +2,8 @@
   @apply relative border-neutral-200 rounded-lg text-white;
   /* padding: 10px; */
   padding-left: 10px;
-  width: 395px;
-  height: 550px;
+  width: 320px;
+  height: 495px;
   background: #0d0c0c44;
   backdrop-filter: blur(9px);
   overflow: hidden;

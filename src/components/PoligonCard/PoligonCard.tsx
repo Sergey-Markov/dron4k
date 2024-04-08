@@ -3,8 +3,9 @@ import React from "react";
 function PoligonCard() {
   return (
     <svg
+      className="w-full"
       xmlns="http://www.w3.org/2000/svg"
-      width="395"
+      // width="395"
       height="222"
       fill="none"
     >

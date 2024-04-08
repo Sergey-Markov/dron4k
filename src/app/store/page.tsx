@@ -8,24 +8,11 @@ import { CONSTANTS } from "@utils/constants";
 
 const Store = () => {
   return (
-    <section
+    <main
       id="store"
       className={s.storeSection}
     >
-      <Image
-        className="kenburns-top"
-        src={heroBg}
-        placeholder="blur"
-        quality={100}
-        alt=" FVP дрон"
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-          zIndex: -1,
-        }}
-      />
-      <div>
+      <div className={s.storeCards}>
         {CONSTANTS.sellCards.map((item, ind) => {
           const keyGen = `sellCard${ind}`;
           return (
@@ -38,7 +25,7 @@ const Store = () => {
 
         {/* <StoreCard /> */}
       </div>
-    </section>
+    </main>
   );
 };
 

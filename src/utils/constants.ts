@@ -1,5 +1,4 @@
 import dron1 from "@images/drone1_sell.png";
-import { StaticImageData } from "next/image";
 
 const headerNavLinks = [
   {
@@ -71,6 +70,45 @@ const buttonInterestTitle = "Цікавить";
 const buttonBuyTitle = "Придбати";
 
 const sellCards = [
+  {
+    category: "FPV Drone",
+    productName: "iFlight XL10 V6 Analog 6S BNF 5.8G 1.6W ELRS 868/915MHz",
+    price: 23000,
+    image: dron1,
+    hitLabel: "хіт",
+    productText:
+      "10-дюймовий дрон для далеких польотів. Наджорстка рама, потужні двигуни XING2 3100. Рекомендовані акамулятори: 6S LiPo 8000mAh і вище для повільних оглядових польотів або 6S 2500mAh для більш швидкісних. Легко несе вантаж вагою до 3-ох кілограм.",
+    specifications: {
+      speed: 39,
+      weight: 860,
+    },
+  },
+  {
+    category: "FPV Drone",
+    productName: "iFlight XL10 V6 Analog 6S BNF 5.8G 1.6W ELRS 868/915MHz",
+    price: 23000,
+    image: dron1,
+    hitLabel: "хіт",
+    productText:
+      "10-дюймовий дрон для далеких польотів. Наджорстка рама, потужні двигуни XING2 3100. Рекомендовані акамулятори: 6S LiPo 8000mAh і вище для повільних оглядових польотів або 6S 2500mAh для більш швидкісних. Легко несе вантаж вагою до 3-ох кілограм.",
+    specifications: {
+      speed: 39,
+      weight: 860,
+    },
+  },
+  {
+    category: "FPV Drone",
+    productName: "iFlight XL10 V6 Analog 6S BNF 5.8G 1.6W ELRS 868/915MHz",
+    price: 23000,
+    image: dron1,
+    hitLabel: "хіт",
+    productText:
+      "10-дюймовий дрон для далеких польотів. Наджорстка рама, потужні двигуни XING2 3100. Рекомендовані акамулятори: 6S LiPo 8000mAh і вище для повільних оглядових польотів або 6S 2500mAh для більш швидкісних. Легко несе вантаж вагою до 3-ох кілограм.",
+    specifications: {
+      speed: 39,
+      weight: 860,
+    },
+  },
   {
     category: "FPV Drone",
     productName: "iFlight XL10 V6 Analog 6S BNF 5.8G 1.6W ELRS 868/915MHz",

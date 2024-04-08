@@ -44,13 +44,13 @@ const StoreCard = ({ options }: IStoreCard) => {
           quality={100}
           alt={options.category}
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
             objectFit: "cover",
           }}
         />
       </div>
-      <div className=" absolute bottom-0 left-0 ">
+      <div className=" absolute bottom-0 left-0 w-full">
         <PoligonCard />
         <div className={s.award}>
           <FaAward size={70} />

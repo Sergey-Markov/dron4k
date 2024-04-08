@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter} ${caveatMono.variable} flex flex-col justify-between overflow-hidden`}
+        className={`${inter} ${caveatMono.variable} relative flex flex-col justify-between overflow-hidden h-screen`}
       >
         <Header />
         {children}

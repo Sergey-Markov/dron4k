@@ -1,6 +1,9 @@
 .footer {
-  @apply w-full h-fit fixed bottom-0 text-base text-gray-400 flex flex-col items-center animate-slide-top;
-  padding: 20px;
+  @apply w-full absolute bottom-0 left-0 text-base text-gray-400 flex flex-col items-center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.527);
+  backdrop-filter: blur(4px);
+  animation: footer-to-top 4s ease-in 1s both;
 }
 .linksWrapper {
   @apply flex flex-row items-center gap-8 pt-3;
@@ -8,12 +11,19 @@
 .linksList {
   @apply flex flex-row gap-2  border-l-2 border-r-2 border-gray-400 px-8;
 }
-
-.blurBox {
+@keyframes footer-to-top {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+/* .blurBox {
   height: 100%;
   width: 100%;
   position: absolute;
   background: rgba(0, 0, 0, 0.527);
   filter: blur(9px);
   z-index: -1;
-}
+} */

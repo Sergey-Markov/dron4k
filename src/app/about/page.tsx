@@ -24,11 +24,11 @@ const {
 
 function About() {
   return (
-    <section className={s.hero}>
-      <div className={s.svgBox}>
-        <DroneSvg />
-      </div>
+    <main className={s.hero}>
       <div className={s.parent}>
+        <div className={s.svgBox}>
+          <DroneSvg />
+        </div>
         <div className={s.gridBox1}>
           <Image
             className="kenburns-top"
@@ -137,7 +137,7 @@ function About() {
           />
         </div>
       </div>
-    </section>
+    </main>
   );
 }
 
