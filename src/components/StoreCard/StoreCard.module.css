@@ -1,0 +1,64 @@
+.cardWrapper {
+  @apply relative border-neutral-200 rounded-lg text-white;
+  /* padding: 10px; */
+  padding-left: 10px;
+  width: 320px;
+  height: 495px;
+  background: #0d0c0c44;
+  backdrop-filter: blur(9px);
+  overflow: hidden;
+}
+.cardTitle {
+  @apply font-bold text-3xl text-appColors-bg-gold;
+}
+
+.droneName {
+  @apply font-medium  w-1/2;
+}
+.price {
+  @apply self-end p-2 w-1/3 text-center bg-appColors-bg-gold;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.award {
+  @apply absolute text-appColors-bg-gold;
+  top: -20px;
+  left: 10px;
+  background-color: transparent;
+}
+.hit {
+  @apply absolute  font-caveat rounded-full  font-bold bg-appColors-bg-gold;
+  font-size: 35px;
+  width: fit-content;
+  top: -15px;
+  right: 25px;
+  padding: 10px;
+  transform: rotate(338deg);
+}
+.hitText {
+  line-height: 1;
+  transform: rotateX(45deg);
+}
+
+.thumbWrapper {
+  @apply absolute font-light  flex flex-row justify-between w-full;
+  font-size: 12px;
+  top: 55px;
+  left: 0px;
+  padding: 10px;
+}
+.productText {
+  max-width: 225px;
+}
+.specificationsWrapper {
+  @apply flex flex-col justify-between;
+}
+.specifications {
+  @apply flex text-center gap-2;
+}
+.specificationsItem {
+  @apply border-l-2 border-gray-400 px-2 flex flex-col gap-3 align-top;
+}
+.btn {
+  @apply w-full;
+}
