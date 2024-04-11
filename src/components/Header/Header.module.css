@@ -1,5 +1,5 @@
 .headerBox {
-  @apply w-full;
+  @apply w-full h-fit;
   position: relative;
   z-index: 10;
 }
@@ -7,7 +7,7 @@
   @apply w-screen h-full;
   position: absolute;
   background: rgba(0, 0, 0, 0.25);
-  filter: blur(9px);
+  backdrop-filter: blur(4px);
   z-index: -1;
 }
 .headerWrapper {

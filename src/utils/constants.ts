@@ -124,6 +124,31 @@ const sellCards = [
   },
 ];
 
+const courseOperator = {
+  type: "operator",
+  title: "Оператор БПЛА",
+  price: "12000 грн",
+  droneLabel: "Технічне оснащення:",
+  drones: "DJI Mavic 3, Mavic 3 thermal, Air 2s, Autel evo 2pro",
+  termsLabel: "Тривалість - 6 днів:",
+  termsTeori: "-теорія 3 дні",
+  termsPractic: "-практичні польоти + симулятор 3 дні",
+  studentsText: "Кількість курсантів в групі до 20 людей.",
+  sertificateText: "Залік + сертифікат",
+};
+const courseConstruct = {
+  type: "construct",
+  title: "Інженер БПЛА",
+  price: "10000 грн",
+  droneLabel: "Технічне оснащення:",
+  drones: "DJI Mavic 3, Mavic 3 thermal, Air 2s, Autel evo 2pro",
+  termsLabel: "Тривалість - 10 днів:",
+  termsTeori: "-теорія 5 дні",
+  termsPractic: "-налаштування + конструювання 5 днів",
+  studentsText: "Кількість курсантів в групі до 5 людей.",
+  sertificateText: "Залік + сертифікат",
+};
+
 export const CONSTANTS = {
   headerNavLinks,
   companyName,
@@ -141,4 +166,6 @@ export const CONSTANTS = {
   allRightsReserved,
   devName,
   sellCards,
+  courseOperator,
+  courseConstruct,
 };

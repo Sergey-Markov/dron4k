@@ -26,6 +26,7 @@
     "linebreak-style": "off",
     "prefer-arrow-callback": "error",
     "react/function-component-definition": [
+      1,
       {
         "namedComponents": [
           "function-declaration",

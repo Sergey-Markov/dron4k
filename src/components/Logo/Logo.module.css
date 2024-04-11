@@ -1,5 +1,5 @@
 .logoWrapper {
-  @apply flex flex-row items-center px-2 cursor-pointer text-white fill-white hover:text-red-500 hover:fill-red-500 transition-colors;
+  @apply flex flex-row items-center px-2 cursor-pointer text-red-500 fill-red-500 hover:text-white hover:fill-white transition-colors;
 }
 
 .someLine {

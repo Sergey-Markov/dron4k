@@ -6,8 +6,8 @@ function ZSUHelp() {
   return (
     <div className={s.logoWrapper}>
       <svg
-        width="202"
-        height="149"
+        width="200"
+        height="139"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         // eslint-disable-next-line react/no-unknown-property

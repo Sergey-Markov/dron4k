@@ -1,0 +1,19 @@
+.main {
+  @apply absolute h-full w-full flex;
+}
+.construct {
+  @apply h-full w-full flex items-center justify-center;
+  background-image: url("../../../public/assets/images/construct.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: var(--bg-animation);
+}
+.operatorView {
+  @apply h-full w-full flex items-center justify-center;
+  background-image: url("../../../public/assets/images/operator.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: var(--bg-animation);
+}

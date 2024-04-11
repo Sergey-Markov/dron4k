@@ -1,0 +1,79 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  top: 40%;
+}
+.smile {
+  @apply absolute text-slate-50 w-1/2 h-1/2 rounded-full z-10;
+  top: -50px;
+  background-color: #063947;
+}
+.smileSec {
+  display: none;
+}
+
+.box:hover .smile {
+  display: none;
+}
+.box:hover .smileSec {
+  @apply absolute text-slate-50 w-1/2 h-1/2 rounded-full z-10;
+  top: -50px;
+  background-color: #063947;
+  display: block;
+}
+
+.constructTitle {
+  @apply absolute font-sans text-white py-2 rounded-md;
+  left: -20px;
+  width: 325px;
+  height: fit-content;
+  padding: 10px;
+  background-color: #063947;
+  text-align: left;
+  transform: rotate(30deg);
+  z-index: 1;
+}
+.operatorTitle {
+  @apply absolute font-sans text-white py-2 rounded-md;
+  left: 0px;
+  width: 325px;
+  height: fit-content;
+  padding: 10px;
+  text-align: right;
+  background-color: #063947;
+  transform: rotate(330deg);
+}
+.operatorTitle::after {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  content: " ";
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.constructTitle::after {
+  position: absolute;
+  right: 10px;
+  bottom: 40%;
+  content: " ";
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.text:hover,
+.text:active,
+.text:focus-visible {
+  @apply text-red-400 transition-colors cursor-pointer;
+}
