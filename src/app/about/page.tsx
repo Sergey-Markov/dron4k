@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import DroneSvg from "@components/DroneSvg/DroneSvg";
@@ -9,9 +10,9 @@ import fpvDronOperator from "@images/FPV_dron_operator.png";
 import team from "@images/team.png";
 import page from "@images/web_page.png";
 import { CONSTANTS } from "@utils/constants";
+import Button from "@components/Button/Button";
 
 import s from "./About.module.css";
-import Button from "@components/Button/Button";
 
 const {
   aboutTitle,

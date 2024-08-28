@@ -1,7 +1,12 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable react/button-has-type */
+
 "use client";
+
 import React from "react";
-import s from "./Button.module.css";
 import classNames from "classnames";
+
+import s from "./Button.module.css";
 
 interface ButtonProps {
   type?: "button" | "submit" | "reset";
