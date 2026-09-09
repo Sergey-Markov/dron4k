@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
-import DroneSvg from "@components/DroneSvg/DroneSvg";
+import type { Metadata } from "next";
 import dronOperator from "@images/dron_operator.png";
 import drone3D from "@images/drone_3D.png";
 import home from "@images/home.png";
@@ -11,8 +9,16 @@ import team from "@images/team.png";
 import page from "@images/web_page.png";
 import { CONSTANTS } from "@utils/constants";
 import Button from "@components/Button/Button";
+import LuminosityCard from "@components/ui/luminosity-card";
+import ScrollReveal from "@components/ScrollReveal/ScrollReveal";
 
 import s from "./About.module.css";
+
+export const metadata: Metadata = {
+  title: "Про нас",
+  description:
+    "Dron4k — команда інструкторів та інженерів БПЛА. Дізнайтеся про наше бачення, підхід до навчання та технічне оснащення.",
+};
 
 const {
   aboutTitle,
@@ -21,123 +27,63 @@ const {
   teamVisionTextUp,
   teamVisionTextDown,
   buttonInterestTitle,
+  companyEmail,
 } = CONSTANTS;
+
+const photoFrame = (src: typeof dronOperator, alt: string, grayscale = false) => (
+  <div className={s.photoFrame}>
+    <Image
+      src={src}
+      placeholder="blur"
+      alt={alt}
+      fill
+      sizes="(max-width: 768px) 50vw, 20vw"
+      style={{ objectFit: "cover" }}
+      className={grayscale ? "grayscale" : undefined}
+    />
+  </div>
+);
 
 function About() {
   return (
-    <main className={s.hero}>
-      <div className={s.parent}>
-        <div className={s.svgBox}>
-          <DroneSvg />
-        </div>
-        <div className={s.gridBox1}>
-          <Image
-            className="kenburns-top"
-            src={dronOperator}
-            placeholder="blur"
-            quality={100}
-            alt=" FVP дрон"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              filter: "grayscale(100%) ",
-              // zIndex: -2,
-            }}
-          />
-        </div>
-        <div className={s.gridBox2}>
-          <Image
-            className="kenburns-top"
-            src={drone3D}
-            placeholder="blur"
-            quality={100}
-            alt=" FVP дрон"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              // zIndex: -2,
-            }}
-          />
-        </div>
-        <div className={s.gridBox3}>
-          <Image
-            className="kenburns-top"
-            src={home}
-            placeholder="blur"
-            quality={100}
-            alt=" FVP дрон"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              // zIndex: -2,
-            }}
-          />
-        </div>
-        <div className={s.gridBox4}>
-          <h2 className={s.title}>{aboutTitle}</h2>
-          <p className={s.text}>{aboutText}</p>
-        </div>
-        <div className={s.gridBox5}>
-          <h2 className={s.title}>{teamVisionTitle}</h2>
-          <div>
+    <main className={s.main}>
+      <ScrollReveal>
+        <section className={s.section}>
+          <LuminosityCard className={s.card}>
+            <span className={s.index}>01/ABOUT</span>
+            <h2 className={s.heading}>{aboutTitle}</h2>
+            <p className={s.text}>{aboutText}</p>
+            <div className={s.photoRow}>
+              {photoFrame(dronOperator, "Оператор керує FPV-дроном", true)}
+              {photoFrame(drone3D, "3D-модель дрона Dron4k")}
+              {photoFrame(home, "Дрон у польоті над полем")}
+            </div>
+          </LuminosityCard>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <section className={s.section}>
+          <LuminosityCard className={s.card}>
+            <span className={s.index}>02/VISION</span>
+            <h2 className={s.heading}>{teamVisionTitle}</h2>
             <p className={s.text}>{teamVisionTextUp}</p>
             <p className={s.text}>{teamVisionTextDown}</p>
-          </div>
-          <div className={s.button}>
-            <Button
-              title={buttonInterestTitle}
-              variant="primary"
-              onClick={() => {}}
-            />
-          </div>
-        </div>
-        <div className={s.gridBox6}>
-          <Image
-            className="kenburns-top"
-            src={fpvDronOperator}
-            placeholder="blur"
-            quality={100}
-            alt=" FVP дрон"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
-        <div className={s.gridBox7}>
-          <Image
-            className="kenburns-top"
-            src={team}
-            placeholder="blur"
-            quality={100}
-            alt=" FVP дрон"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
-        <div className={s.gridBox8}>
-          <Image
-            className="kenburns-top"
-            src={page}
-            placeholder="blur"
-            quality={100}
-            alt=" FVP дрон"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              filter: "grayscale(100%) ",
-            }}
-          />
-        </div>
-      </div>
+            <div className={s.photoRow}>
+              {photoFrame(fpvDronOperator, "Оператор FPV-дрона готується до польоту")}
+              {photoFrame(team, "Команда школи Dron4k")}
+              {photoFrame(page, "Сторінка сайту Dron4k", true)}
+            </div>
+            <div className={s.button}>
+              <Button
+                title={buttonInterestTitle}
+                variant="laser"
+                href={`mailto:${companyEmail}?subject=${encodeURIComponent("Цікавить навчання Dron4k")}`}
+              />
+            </div>
+          </LuminosityCard>
+        </section>
+      </ScrollReveal>
     </main>
   );
 }

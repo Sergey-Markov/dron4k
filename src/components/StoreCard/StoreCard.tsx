@@ -2,11 +2,11 @@
 
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { FaAward } from "react-icons/fa6";
-import PoligonCard from "@components/PoligonCard/PoligonCard";
 import DroneSpeedSvg from "@components/DroneSpeedSvg/DroneSpeedSvg";
 import DroneWeightSvg from "@components/DroneWeightSvg/DroneWeightSvg";
 import Button from "@components/Button/Button";
+import LuminosityCard from "@components/ui/luminosity-card";
+import { Badge } from "@components/ui/badge";
 import { CONSTANTS } from "@utils/constants";
 
 import s from "./StoreCard.module.css";
@@ -31,58 +31,52 @@ interface IStoreCard {
 const StoreCard = ({ options }: IStoreCard) => {
   const price = `${options.price} грн.`;
   return (
-    <div className={s.cardWrapper}>
-      <h2 className={s.cardTitle}>{options.category}</h2>
-      <div className=" w-full flex justify-between">
-        <h3 className={s.droneName}>{options.productName}</h3>
-        <p className={s.price}>{price}</p>
-      </div>
-      <div className="relative w-full h-1/3">
+    <LuminosityCard
+      size="compact"
+      className={s.card}
+    >
+      <span className={s.category}>{options.category}</span>
+      <Badge className={s.hit}>{options.hitLabel}</Badge>
+
+      <div className={s.photoFrame}>
         <Image
           className="kenburns-top"
           src={options.image}
           placeholder="blur"
-          quality={100}
-          alt={options.category}
+          alt={`${options.category}: ${options.productName}`}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{
-            objectFit: "cover",
-          }}
+          sizes="(max-width: 768px) 90vw, 33vw"
+          style={{ objectFit: "cover" }}
         />
       </div>
-      <div className=" absolute bottom-0 left-0 w-full">
-        <PoligonCard />
-        <div className={s.award}>
-          <FaAward size={70} />
-        </div>
-        <div className={s.hit}>
-          <p className={s.hitText}>хіт</p>
-        </div>
-        <div className={s.thumbWrapper}>
-          <p className={s.productText}>{options.productText}</p>
-          <div className={s.specificationsWrapper}>
-            <div className={s.specifications}>
-              <div className={s.specificationsItem}>
-                <DroneSpeedSvg />
-                <p>{options.specifications.speed}</p>
-              </div>
-              <div className={s.specificationsItem}>
-                <DroneWeightSvg />
-                <p>{options.specifications.weight}</p>
-              </div>
-            </div>
-            <div className={s.btn}>
-              <Button
-                variant="secondary"
-                title={CONSTANTS.buttonBuyTitle}
-                onClick={() => {}}
-              />
-            </div>
+
+      <div className={s.headerRow}>
+        <h3 className={s.droneName}>{options.productName}</h3>
+        <span className={s.price}>{price}</span>
+      </div>
+
+      <p className={s.productText}>{options.productText}</p>
+
+      <div className={s.footer}>
+        <div className={s.specifications}>
+          <div className={s.specificationsItem}>
+            <DroneSpeedSvg size={22} />
+            <p>{options.specifications.speed}</p>
+          </div>
+          <div className={s.specificationsItem}>
+            <DroneWeightSvg />
+            <p>{options.specifications.weight}</p>
           </div>
         </div>
+        <Button
+          variant="laser"
+          title={CONSTANTS.buttonBuyTitle}
+          href={`mailto:${CONSTANTS.companyEmail}?subject=${encodeURIComponent(
+            `Придбати "${options.productName}"`,
+          )}`}
+        />
       </div>
-    </div>
+    </LuminosityCard>
   );
 };
 

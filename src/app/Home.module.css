@@ -1,0 +1,59 @@
+.hero {
+  @apply relative flex min-h-screen w-full items-center justify-center overflow-hidden px-6 py-32;
+}
+
+.glow {
+  @apply pointer-events-none absolute -top-1/4 left-1/2 z-0 h-[60vh] w-[60vw];
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(191, 255, 0, 0.15), transparent 65%);
+  filter: blur(90px);
+}
+
+.tiltWrap {
+  @apply pointer-events-none absolute inset-0 z-0 flex items-center justify-center;
+  perspective: 1000px;
+}
+.tiltCard {
+  @apply relative h-[70vh] w-[92vw] max-w-[1400px] overflow-hidden rounded-[2rem] border border-white/10;
+  transform: rotateX(15deg);
+}
+
+.content {
+  @apply relative z-10 flex w-full max-w-3xl flex-col items-center gap-6 text-center;
+}
+
+.headlineBox {
+  @apply border-[12px] border-white px-4 py-2 sm:px-8 sm:py-4;
+  border-radius: 0;
+}
+.headline {
+  @apply font-heading uppercase text-white;
+  font-size: clamp(2.6rem, 10vw, 8.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  @apply max-w-xl text-sm text-white/60 sm:text-base;
+}
+
+.metaRow {
+  @apply mt-6 flex w-full flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between;
+}
+.statusTag {
+  @apply font-techmono text-[11px] uppercase tracking-[0.3em] text-white/40;
+}
+.actions {
+  @apply flex flex-row flex-wrap items-center justify-center gap-4;
+}
+
+.bentoSection {
+  @apply mx-auto max-w-[1600px] px-6 py-24 sm:px-8;
+}
+.bentoGrid {
+  @apply grid grid-cols-1 gap-6 md:grid-cols-3;
+}
+
+.socialSection {
+  @apply mx-auto flex max-w-[1600px] flex-col items-center gap-6 px-6 py-24 sm:px-8;
+}

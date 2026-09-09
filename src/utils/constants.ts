@@ -29,8 +29,8 @@ const companyContacts = [
   {
     type: "email",
     title: "емейл компанії Dron4k",
-    href: "mailto:1EmailDrone@gmai.com",
-    text: "1EmailDrone@gmai.com",
+    href: "mailto:1EmailDrone@gmail.com",
+    text: "1EmailDrone@gmail.com",
   },
 ];
 
@@ -56,6 +56,43 @@ const teamLink = "Команда фахівців";
 const policyLink = "Політика конфіденційності";
 const allRightsReserved = "© 2024 Усі права захищено - розроблено";
 const devName = "QttR";
+
+const companyEmail = "1EmailDrone@gmail.com";
+
+// eslint-disable-next-line operator-linebreak
+const homeSubtitle =
+  "Навчання операторів та інженерів БПЛА, курси керування FPV-дронами DJI та продаж дронів для аерозйомки й військових потреб.";
+
+const teamPageTitle = "Команда фахівців";
+// eslint-disable-next-line operator-linebreak
+const teamPageIntro =
+  "Dron4k — це команда пілотів-інструкторів та інженерів БПЛА з практичним досвідом польотів DJI Mavic 3, Mavic 3 thermal, Air 2s та Autel Evo 2 Pro, а також бойовим і волонтерським досвідом застосування дронів.";
+// eslint-disable-next-line operator-linebreak
+const teamPageBody =
+  "Кожен інструктор пройшов десятки годин теоретичної підготовки та сотні польотів, перш ніж почав навчати курсантів. Групи невеликі (до 20 людей на курсі оператора, до 5 — на курсі інженера), тож кожен курсант отримує достатньо уваги та практики на симуляторі й реальній техніці.";
+
+const policyPageTitle = "Політика конфіденційності";
+// eslint-disable-next-line operator-linebreak
+const policyPageIntro =
+  "Ця сторінка описує, як Dron4k обробляє дані, які ви залишаєте, звертаючись до нас телефоном або електронною поштою.";
+const policyPageSections = [
+  {
+    title: "Які дані ми отримуємо",
+    text: "Коли ви телефонуєте або пишете нам на email за контактами, вказаними на сайті, ми отримуємо ваше ім'я, номер телефону та/або email — рівно те, що ви самі вказуєте у зверненні.",
+  },
+  {
+    title: "Як ми використовуємо дані",
+    text: "Отримані контактні дані використовуються лише для того, щоб зв'язатися з вами щодо курсу навчання або придбання дрона, і не передаються третім особам.",
+  },
+  {
+    title: "Зберігання даних",
+    text: "Листування та дзвінки зберігаються стільки, скільки потрібно для обробки вашого запиту, після чого можуть бути видалені на вашу вимогу.",
+  },
+  {
+    title: "Контакти",
+    text: "З питань щодо цієї політики звертайтесь на пошту або за телефоном компанії, вказаними в підвалі сайту.",
+  },
+];
 
 const aboutTitle = "Про нас";
 // eslint-disable-next-line operator-linebreak
@@ -149,11 +186,36 @@ const courseConstruct = {
   sertificateText: "Залік + сертифікат",
 };
 
+const storeTeaser = "FPV-дрони DJI для далеких польотів та аерозйомки.";
+
+const homeBentoItems = [
+  {
+    index: "01/ОПЕРАТОР",
+    title: courseOperator.title,
+    description: `${courseOperator.price} · ${courseOperator.studentsText}`,
+    href: "/courses#operator",
+  },
+  {
+    index: "02/ІНЖЕНЕР",
+    title: courseConstruct.title,
+    description: `${courseConstruct.price} · ${courseConstruct.studentsText}`,
+    href: "/courses#construct",
+  },
+  {
+    index: "03/МАГАЗИН",
+    title: "Продаж дронів",
+    description: storeTeaser,
+    href: "/store",
+  },
+];
+
 export const CONSTANTS = {
   headerNavLinks,
   companyName,
   companyContacts,
   companyInSocial,
+  companyEmail,
+  homeSubtitle,
   aboutTitle,
   aboutText,
   teamVisionTitle,
@@ -168,4 +230,11 @@ export const CONSTANTS = {
   sellCards,
   courseOperator,
   courseConstruct,
+  teamPageTitle,
+  teamPageIntro,
+  teamPageBody,
+  policyPageTitle,
+  policyPageIntro,
+  policyPageSections,
+  homeBentoItems,
 };

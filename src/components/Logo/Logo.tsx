@@ -78,7 +78,7 @@ function Logo({ size }: ILogo) {
           fill="inherit"
         />
       </svg>
-      <h1 className=" font-sans font-extrabold text-inherit text-4xl">
+      <h1 className=" font-heading text-inherit text-2xl sm:text-3xl uppercase tracking-tight">
         {CONSTANTS.companyName}
       </h1>
     </div>

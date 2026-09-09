@@ -1,0 +1,28 @@
+.main {
+  @apply min-h-screen w-full bg-background text-white flex flex-col gap-10 px-6 sm:px-12 md:px-24 py-24 max-w-4xl mx-auto;
+}
+.intro {
+  @apply flex flex-col gap-4;
+}
+.index {
+  @apply font-techmono text-xs uppercase tracking-[0.3em] text-neon;
+}
+.title {
+  @apply font-heading uppercase text-4xl sm:text-5xl text-white;
+  letter-spacing: -0.03em;
+}
+.introText {
+  @apply text-white/60 text-base sm:text-lg;
+}
+.section {
+  @apply flex flex-row gap-6 border-t border-white/10 pt-8;
+}
+.sectionIndex {
+  @apply font-techmono text-xs uppercase tracking-[0.3em] text-white/30;
+}
+.sectionTitle {
+  @apply font-heading uppercase text-lg text-white;
+}
+.text {
+  @apply mt-2 text-white/60 text-base;
+}

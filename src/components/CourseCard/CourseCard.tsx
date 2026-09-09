@@ -3,7 +3,8 @@
 import React from "react";
 
 import Button from "@components/Button/Button";
-import classNames from "classnames";
+import { CONSTANTS } from "@utils/constants";
+import LuminosityCard from "@components/ui/luminosity-card";
 import s from "./CourseCard.module.css";
 
 type TOptions = {
@@ -24,45 +25,43 @@ interface ICourseCard {
 }
 
 const CourseCard = ({ type = "operator", options }: ICourseCard) => {
-  const cardType = classNames([
-    type === "operator" ? s.cardView : s.constructView,
-  ]);
+  const index = type === "operator" ? "01/ОПЕРАТОР" : "02/ІНЖЕНЕР";
 
   return (
-    <div className={cardType}>
-      <div className="relative mb-6">
+    <LuminosityCard
+      size="compact"
+      className={s.card}
+    >
+      <span className={s.index}>{index}</span>
+      <div className={s.headerRow}>
         <h2 className={s.title}>{options.title}</h2>
-        <h2 className={s.price}>{options.price}</h2>
+        <span className={s.price}>{options.price}</span>
       </div>
-      <ol className={s.list}>
+      <ul className={s.list}>
         <li className={s.item}>
           <h3 className={s.label}>{options.droneLabel}</h3>
           <p className={s.text}>{options.drones}</p>
         </li>
         <li className={s.item}>
           <h3 className={s.label}>{options.termsLabel}</h3>
-          <ul>
-            <li>
-              <p className={s.text}>{options.termsTeori}</p>
-            </li>
-            <li>
-              <p className={s.text}>{options.termsPractic}</p>
-            </li>
-            <li className={s.item}>
-              <p className={s.text}>{options.studentsText}</p>
-            </li>
-            <li className={s.item}>
-              <p className={s.text}>{options.sertificateText}</p>
-            </li>
-          </ul>
+          <p className={s.text}>{options.termsTeori}</p>
+          <p className={s.text}>{options.termsPractic}</p>
         </li>
-      </ol>
-      <Button
-        variant="primary"
-        title="Придбати"
-        onClick={() => {}}
-      />
-    </div>
+        <li className={s.item}>
+          <p className={s.text}>{options.studentsText}</p>
+          <p className={s.text}>{options.sertificateText}</p>
+        </li>
+      </ul>
+      <div className={s.footer}>
+        <Button
+          variant="laser"
+          title="Придбати"
+          href={`mailto:${CONSTANTS.companyEmail}?subject=${encodeURIComponent(
+            `Запис на курс "${options.title}"`,
+          )}`}
+        />
+      </div>
+    </LuminosityCard>
   );
 };
 export default CourseCard;

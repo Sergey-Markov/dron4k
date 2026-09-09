@@ -4,34 +4,37 @@
 
 html {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/Roboto.woff2) format("woff2");
+  overflow-x: hidden;
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
   --bg-animation: kenburns-top 5s ease-in both;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  /* Neon Velocity tokens (shadcn/ui vars) */
+  --background: 0 0% 2%; /* #050505 */
+  --foreground: 0 0% 100%;
+  --card: 0 0% 5%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 74 100% 50%; /* #BFFF00 neon lime */
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 0 0% 12%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 100% / 0.1;
+  --ring: 74 100% 50%;
+  --radius: 0.75rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(0, 0, 0);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 @layer utilities {
@@ -44,7 +47,7 @@ body {
 .hovered:active,
 .hovered:focus,
 .hovered:focus-visible {
-  @apply text-red-500 fill-red-500 transition-all duration-300 cursor-pointer;
+  @apply text-neon fill-neon transition-all duration-300 cursor-pointer;
 }
 
 .kenburns-top {
@@ -61,4 +64,24 @@ body {
 
     transform-origin: top;
   }
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
 }

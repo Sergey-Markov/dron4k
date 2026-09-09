@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import ZSUHelp from "@components/ZSUHelp/ZSUHelp";
+import Button from "@components/Button/Button";
 import { CONSTANTS } from "@utils/constants";
 
 import s from "./HeaderNavigation.module.css";
@@ -20,27 +20,11 @@ function HeaderNavigation() {
           </Link>
         );
       })}
-      <ul>
-        {CONSTANTS.companyContacts.map((el, ind) => {
-          const keyExt = `${el.type}-${ind}`;
-          return (
-            <li key={keyExt}>
-              <a
-                className={s.links}
-                type={el.type}
-                href={el.href}
-                title={el.title}
-                referrerPolicy="no-referrer"
-              >
-                {el.text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      <div className=" animate-slide-left">
-        <ZSUHelp />
-      </div>
+      <Button
+        variant="laser"
+        title="Цікавить"
+        href={`mailto:${CONSTANTS.companyEmail}?subject=${encodeURIComponent("Загальне питання Dron4k")}`}
+      />
     </nav>
   );
 }

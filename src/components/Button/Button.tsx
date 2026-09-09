@@ -5,22 +5,55 @@
 
 import React from "react";
 import classNames from "classnames";
+import Link from "next/link";
 
 import s from "./Button.module.css";
 
 interface ButtonProps {
   type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary";
+  variant?: "laser" | "ghost-glass";
   title: string;
-  onClick: () => void;
+  href?: string;
+  onClick?: () => void;
 }
 
-const Button = ({ type = "button", variant, title, onClick }: ButtonProps) => {
+const Button = ({ type = "button", variant = "laser", title, href, onClick }: ButtonProps) => {
   const btnClass = classNames([
     s.btn,
-    variant === "primary" && s.primary,
-    variant === "secondary" && s.secondary,
+    variant === "laser" && s.laser,
+    variant === "ghost-glass" && s.ghostGlass,
   ]);
+
+  const content = (
+    <>
+      <span className={s.sweep} />
+      <span className="relative z-10">{title}</span>
+    </>
+  );
+
+  if (href) {
+    const isInternal = href.startsWith("/");
+    if (isInternal) {
+      return (
+        <Link
+          href={href}
+          className={btnClass}
+        >
+          {content}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={href}
+        className={btnClass}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noreferrer" : undefined}
+      >
+        {content}
+      </a>
+    );
+  }
 
   return (
     <button
@@ -28,7 +61,7 @@ const Button = ({ type = "button", variant, title, onClick }: ButtonProps) => {
       className={btnClass}
       onClick={onClick}
     >
-      {title}
+      {content}
     </button>
   );
 };

@@ -1,0 +1,19 @@
+.nav {
+  @apply fixed bottom-4 left-1/2 z-50 flex items-center gap-1 rounded-full border border-white/10 bg-black/80 px-2 py-2 sm:hidden;
+  transform: translateX(-50%);
+  backdrop-filter: blur(20px);
+}
+
+.item {
+  @apply flex items-center justify-center rounded-full text-white/60 transition-colors duration-300;
+  width: 48px;
+  height: 48px;
+}
+.item:hover,
+.item:focus-visible {
+  @apply text-neon;
+}
+
+.active {
+  @apply text-neon bg-neon/10;
+}

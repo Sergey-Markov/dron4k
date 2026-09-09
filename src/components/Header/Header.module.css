@@ -1,46 +1,15 @@
 .headerBox {
-  @apply w-full h-fit;
+  @apply w-full h-fit border-b border-white/10;
   position: relative;
-  z-index: 10;
+  z-index: 50;
 }
 .blurBox {
   @apply w-screen h-full;
   position: absolute;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(4px);
+  background: rgba(5, 5, 5, 0.6);
+  backdrop-filter: blur(12px);
   z-index: -1;
 }
 .headerWrapper {
-  @apply flex flex-row items-center justify-between w-full gap-2 px-4;
+  @apply flex flex-row items-center justify-between w-full max-w-[1600px] mx-auto gap-2 px-4 sm:px-8 py-3;
 }
-
-/* .visibleMobMenu {
-  @apply flex flex-col justify-start gap-14 bg-white overflow-y-auto h-screen  w-screen sm:max-w-sm z-10 absolute inset-y-0 right-0 px-14 py-5 border-l-2 border-l-appColors-base-100;
-  animation-name: slide-in;
-  animation-duration: 1s;
-  z-index: 999;
-}
-
-.hiddenMobMenu {
-  @apply flex flex-col justify-start gap-14 bg-white overflow-y-auto h-screen  w-screen sm:max-w-sm z-10 absolute inset-y-0 right-0 px-14 py-5 border-l-2 border-l-appColors-base-100;
-  animation: slide-out 1s ease forwards;
-  z-index: 999;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slide-out {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
-} */

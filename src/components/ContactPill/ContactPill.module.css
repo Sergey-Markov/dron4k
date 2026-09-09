@@ -1,0 +1,10 @@
+.pill {
+  @apply flex w-full max-w-xl flex-col gap-2 rounded-full border border-white/10 bg-white/[0.05] p-2 sm:flex-row sm:items-center;
+  backdrop-filter: blur(12px);
+}
+.input {
+  @apply flex-1 rounded-full bg-transparent px-5 py-3 font-techmono text-xs uppercase tracking-[0.15em] text-white placeholder:text-white/30 focus:outline-none;
+}
+.submit {
+  @apply rounded-full bg-neon px-6 py-3 font-techmono text-[11px] font-medium uppercase tracking-[0.2em] text-black shadow-neon transition-all duration-300 ease-elite hover:shadow-neon-lg;
+}

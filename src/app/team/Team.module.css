@@ -1,0 +1,22 @@
+.main {
+  @apply min-h-screen w-full flex flex-col md:flex-row bg-background text-white;
+}
+.imageBox {
+  @apply relative w-full h-[45vh] md:h-screen md:w-2/5 border-b md:border-b-0 md:border-r border-white/10;
+}
+.content {
+  @apply relative flex flex-col gap-4 justify-center px-6 sm:px-12 py-10 md:w-3/5;
+}
+.index {
+  @apply font-techmono text-xs uppercase tracking-[0.3em] text-neon;
+}
+.title {
+  @apply font-heading uppercase text-4xl sm:text-5xl text-white;
+  letter-spacing: -0.03em;
+}
+.text {
+  @apply text-base sm:text-lg text-white/60 max-w-2xl;
+}
+.button {
+  @apply w-fit mt-2;
+}

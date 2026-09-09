@@ -1,20 +1,36 @@
 .btn {
-  @apply w-full rounded-md px-3.5 py-2.5 bg-transparent font-caveat shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  transition-all duration-300;
-  /* width: fit-content; */
-  height: auto;
-  padding: 5px 15px;
+  @apply relative inline-flex items-center justify-center overflow-hidden text-center rounded-full font-techmono uppercase tracking-[0.2em] text-[11px] font-medium transition-all duration-300 ease-elite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon;
+  padding: 15px 28px;
 }
 
-.primary {
-  @apply bg-red-500  text-sm font-semibold text-gray-800  hover:bg-red-600 focus-visible:bg-red-600;
+.laser {
+  @apply bg-neon text-black shadow-neon;
 }
-.secondary {
-  @apply text-sm font-semibold text-white;
-  border: 2px solid #d29e39;
+.laser:hover,
+.laser:focus-visible {
+  @apply shadow-neon-lg;
 }
-.secondary:hover,
-.secondary:focus-visible {
-  @apply text-sm font-semibold;
-  background: #0d0c0c44;
-  backdrop-filter: blur(9px);
+
+.ghostGlass {
+  @apply text-white border border-white/10 bg-white/[0.03];
+  backdrop-filter: blur(12px);
+}
+.ghostGlass:hover,
+.ghostGlass:focus-visible {
+  @apply border-neon/30 bg-neon/5 text-neon;
+}
+
+.sweep {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.5) 40%, transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.btn:hover .sweep {
+  left: 130%;
 }

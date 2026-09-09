@@ -1,51 +1,34 @@
-.cardView {
-  @apply text-white p-3;
-  width: 300px;
-  height: 500px;
-  background-image: url("../../../public/assets/images/operator_card.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  opacity: 0.9;
-  border-radius: 8px;
+.card {
+  @apply flex w-[90vw] max-w-[340px] flex-col gap-4;
+  min-height: 480px;
 }
-.constructView {
-  @apply text-white p-3;
-  width: 300px;
-  height: 500px;
-  background-color: black;
-  background-image: url("../../../public/assets/images/construct_card.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
+.index {
+  @apply font-techmono text-xs uppercase tracking-[0.3em] text-neon;
+}
+.headerRow {
+  @apply flex items-start justify-between gap-3;
 }
 .title {
-  @apply text-appColors-bg-gold font-bold text-xl;
+  @apply font-heading text-xl uppercase leading-tight text-white;
 }
 .price {
-  @apply bg-appColors-bg-gold text-white font-bold text-xl absolute top-0 px-3;
-  right: -12px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.79);
+  @apply whitespace-nowrap rounded-full bg-neon px-3 py-1 font-techmono text-[11px] font-medium uppercase text-black;
 }
 .list {
-  @apply flex flex-col justify-between;
-  height: 80%;
+  @apply flex flex-1 flex-col justify-between gap-3;
 }
 .item {
-  @apply p-1;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(3px);
+  @apply rounded-xl border border-white/5 bg-white/[0.02] p-3;
 }
 .label {
-  @apply text-appColors-bg-gold font-bold text-lg;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.79);
+  @apply font-techmono text-[10px] uppercase tracking-[0.2em] text-white/40;
 }
-
 .text {
-  @apply text-sm;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.79);
+  @apply mt-1 text-sm text-white/70;
+}
+.footer {
+  @apply mt-2 w-full;
+}
+.footer > * {
+  @apply w-full;
 }
