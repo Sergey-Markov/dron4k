@@ -5,9 +5,10 @@ import s from "./Logo.module.css";
 
 interface ILogo {
   size: number;
+  showText?: boolean;
 }
 
-function Logo({ size }: ILogo) {
+function Logo({ size, showText = true }: ILogo) {
   return (
     <div className={s.logoWrapper}>
       <svg
@@ -78,9 +79,11 @@ function Logo({ size }: ILogo) {
           fill="inherit"
         />
       </svg>
-      <h1 className=" font-heading text-inherit text-2xl sm:text-3xl uppercase tracking-tight">
-        {CONSTANTS.companyName}
-      </h1>
+      {showText && (
+        <h1 className=" font-heading text-inherit text-2xl sm:text-3xl uppercase tracking-tight">
+          {CONSTANTS.companyName}
+        </h1>
+      )}
     </div>
   );
 }

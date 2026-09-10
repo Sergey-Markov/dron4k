@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import type { Metadata } from "next";
 import teamPhoto from "@images/team.png";
 import Button from "@components/Button/Button";
+import ImageWithLoader from "@components/ImageWithLoader/ImageWithLoader";
 import ScrollReveal from "@components/ScrollReveal/ScrollReveal";
 import { CONSTANTS } from "@utils/constants";
 
@@ -26,7 +26,7 @@ function Team() {
   return (
     <main className={s.main}>
       <div className={s.imageBox}>
-        <Image
+        <ImageWithLoader
           className="kenburns-top"
           src={teamPhoto}
           placeholder="blur"

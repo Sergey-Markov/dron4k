@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
+import ImageWithLoader from "@components/ImageWithLoader/ImageWithLoader";
 import DroneSpeedSvg from "@components/DroneSpeedSvg/DroneSpeedSvg";
 import DroneWeightSvg from "@components/DroneWeightSvg/DroneWeightSvg";
 import Button from "@components/Button/Button";
@@ -39,7 +40,7 @@ const StoreCard = ({ options }: IStoreCard) => {
       <Badge className={s.hit}>{options.hitLabel}</Badge>
 
       <div className={s.photoFrame}>
-        <Image
+        <ImageWithLoader
           className="kenburns-top"
           src={options.image}
           placeholder="blur"

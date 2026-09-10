@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import type { Metadata } from "next";
+import ImageWithLoader from "@components/ImageWithLoader/ImageWithLoader";
 import dronOperator from "@images/dron_operator.png";
 import drone3D from "@images/drone_3D.png";
 import home from "@images/home.png";
@@ -32,7 +32,7 @@ const {
 
 const photoFrame = (src: typeof dronOperator, alt: string, grayscale = false) => (
   <div className={s.photoFrame}>
-    <Image
+    <ImageWithLoader
       src={src}
       placeholder="blur"
       alt={alt}

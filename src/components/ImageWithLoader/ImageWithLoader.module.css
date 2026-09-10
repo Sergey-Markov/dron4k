@@ -1,0 +1,8 @@
+.overlay {
+  @apply absolute inset-0 z-10 flex items-center justify-center bg-background/40 transition-opacity duration-500 ease-elite;
+  backdrop-filter: blur(4px);
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

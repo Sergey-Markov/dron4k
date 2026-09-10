@@ -1,0 +1,55 @@
+.wrapper {
+  @apply flex flex-col items-center justify-center gap-4;
+}
+.fullScreen {
+  @apply fixed inset-0 z-[60] bg-background;
+}
+
+.ring {
+  @apply relative flex items-center justify-center rounded-full;
+  width: 96px;
+  height: 96px;
+  border: 1px solid rgba(191, 255, 0, 0.15);
+}
+.ring::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  border-top-color: #bfff00;
+  border-right-color: #bfff00;
+  filter: drop-shadow(0 0 6px rgba(191, 255, 0, 0.6));
+  animation: spin 1s linear infinite;
+}
+.ringSm {
+  width: 44px;
+  height: 44px;
+}
+
+.mark {
+  @apply cursor-default;
+  animation: pulse 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.label {
+  @apply font-techmono text-[10px] uppercase tracking-[0.3em] text-white/40;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
