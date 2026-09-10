@@ -13,6 +13,7 @@ function ZSUHelp() {
       title="Підтримати ЗСУ (Повернись живим)"
     >
       <Image
+        className={s.badge}
         src="/assets/images/donat_ZSU.svg"
         width={130}
         height={90}

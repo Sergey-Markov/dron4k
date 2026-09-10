@@ -1,3 +1,8 @@
 .logoWrapper {
   @apply flex flex-row items-center px-2 cursor-pointer;
 }
+
+.badge {
+  width: auto;
+  height: auto;
+}
