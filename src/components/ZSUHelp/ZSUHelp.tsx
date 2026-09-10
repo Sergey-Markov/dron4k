@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { withBasePath } from "@utils/basePath";
 
 import s from "./ZSUHelp.module.css";
 
@@ -14,7 +15,7 @@ function ZSUHelp() {
     >
       <Image
         className={s.badge}
-        src="/assets/images/donat_ZSU.svg"
+        src={withBasePath("/assets/images/donat_ZSU.svg")}
         width={130}
         height={90}
         alt="Підтримати ЗСУ"
